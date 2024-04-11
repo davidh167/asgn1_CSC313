@@ -1,7 +1,14 @@
 import './style.css';
-import {Map, View} from 'ol';
-import TileLayer from 'ol/layer/Tile';
-import OSM from 'ol/source/OSM';
+// import {Map, View} from 'ol';
+// import TileLayer from 'ol/layer/Tile';
+// import OSM from 'ol/source/OSM';
+
+
+import Map from 'https://cdn.jsdelivr.net/npm/ol/Map.js';
+import View from 'https://cdn.jsdelivr.net/npm/ol/View.js';
+import TileLayer from 'https://cdn.jsdelivr.net/npm/ol/layer/Tile.js';
+import OSM from 'https://cdn.jsdelivr.net/npm/ol/source/OSM.js';
+
 
 const map = new Map({
   target: 'map',
