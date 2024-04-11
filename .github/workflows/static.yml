@@ -34,9 +34,6 @@ jobs:
 
       - name: Install Dependencies
         run: npm install; npm install -g ol
-
-      - name: Build
-        run: npm run build
         
       - name: Setup Pages
         uses: actions/configure-pages@v5
