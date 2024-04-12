@@ -12,88 +12,61 @@ import {OGCMapTile, Vector as VectorSource} from 'ol/source.js';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer.js';
 import {fromLonLat} from 'ol/proj.js';
 
-const rome = new Feature({
-  geometry: new Point(fromLonLat([12.5, 41.9])),
-});
 
-const london = new Feature({
-  geometry: new Point(fromLonLat([-0.12755, 51.507222])),
+const los_angeles = new Feature({
+  geometry: new Point([-13190998.643709859, 4030082.937783881]),
 });
-
-const madrid = new Feature({
-  geometry: new Point(fromLonLat([-3.683333, 40.4])),
+const oxnard = new Feature({
+  geometry: new Point([-13266744.537882347, 4055901.6679389076]),
 });
-const paris = new Feature({
-  geometry: new Point(fromLonLat([2.353, 48.8566])),
-});
-const berlin = new Feature({
-  geometry: new Point(fromLonLat([13.3884, 52.5169])),
+const san_jose = new Feature({
+  geometry: new Point([-13567972.853579128, 4486008.5094353715]),
 });
 
 
+// ================
 
-rome.setStyle(
+los_angeles.setStyle(
   new Style({
     image: new Icon({
-      color: '#BADA55',
-      crossOrigin: 'anonymous',
-      src: 'data/dot.svg',
-    }),
-  }),
-);
-
-
-
-london.setStyle(
-  new Style({
-    image: new Icon({
-      color: 'rgba(255, 0, 0, .5)',
+      color: '#63FFE3',
       crossOrigin: 'anonymous',
       src: 'data/dot.png',
-      scale: 0.2,
+      scale: 0.1,
     }),
   }),
 );
 
 
 
-madrid.setStyle(
+oxnard.setStyle(
   new Style({
     image: new Icon({
+      color: '#FF6363',
       crossOrigin: 'anonymous',
       src: 'data/dot.png',
-      scale: 0.2,
+      scale: 0.08,
     }),
   }),
 );
 
 
 
-paris.setStyle(
+san_jose.setStyle(
   new Style({
     image: new Icon({
-      color: '#8959A8',
+      color: '#FFC426',
       crossOrigin: 'anonymous',
       src: 'data/dot.png',
+      scale: 0.08,
     }),
   }),
 );
 
-
-
-berlin.setStyle(
-  new Style({
-    image: new Icon({
-      crossOrigin: 'anonymous',
-      src: 'data/dot.png',
-    }),
-  }),
-);
-
-
+// ================
 
 const vectorSource = new VectorSource({
-  features: [rome, london, madrid, paris, berlin],
+  features: [los_angeles, oxnard, san_jose],
 });
 
 
@@ -102,7 +75,7 @@ const vectorLayer = new VectorLayer({
   source: vectorSource,
 });
 
-
+// 
 
 const rasterLayer = new TileLayer({
   source: new OGCMapTile({
@@ -111,16 +84,6 @@ const rasterLayer = new TileLayer({
   }),
 });
 
-
-
-// const map = new Map({
-//   layers: [rasterLayer, vectorLayer],
-//   target: document.getElementById('map'),
-//   view: new View({
-//     center: fromLonLat([2.896372, 44.6024]),
-//     zoom: 3,
-//   }),
-// });
 
 const map = new Map({
   target: 'map',
@@ -132,7 +95,7 @@ const map = new Map({
   ],
   view: new View({
     center: [-13432061.001022695, 4204734.068359812],
-    zoom: 12
+    zoom: 10
   }),
 
 });
