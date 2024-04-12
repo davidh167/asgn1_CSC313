@@ -32,7 +32,7 @@ los_angeles.setStyle(
       color: '#63FFE3',
       crossOrigin: 'anonymous',
       src: 'data/dot.png',
-      scale: 0.1,
+      scale: 0.12,
     }),
   }),
 );
