@@ -37,7 +37,7 @@ rome.setStyle(
     image: new Icon({
       color: '#BADA55',
       crossOrigin: 'anonymous',
-      src: 'data/square.svg',
+      src: 'data/dot.svg',
     }),
   }),
 );
@@ -49,7 +49,7 @@ london.setStyle(
     image: new Icon({
       color: 'rgba(255, 0, 0, .5)',
       crossOrigin: 'anonymous',
-      src: 'data/bigdot.png',
+      src: 'data/dot.png',
       scale: 0.2,
     }),
   }),
@@ -61,7 +61,7 @@ madrid.setStyle(
   new Style({
     image: new Icon({
       crossOrigin: 'anonymous',
-      src: 'data/bigdot.png',
+      src: 'data/dot.png',
       scale: 0.2,
     }),
   }),
@@ -74,7 +74,7 @@ paris.setStyle(
     image: new Icon({
       color: '#8959A8',
       crossOrigin: 'anonymous',
-      src: 'data/dot.svg',
+      src: 'data/dot.png',
     }),
   }),
 );
@@ -85,7 +85,7 @@ berlin.setStyle(
   new Style({
     image: new Icon({
       crossOrigin: 'anonymous',
-      src: 'data/dot.svg',
+      src: 'data/dot.png',
     }),
   }),
 );
@@ -125,7 +125,7 @@ const rasterLayer = new TileLayer({
 const map = new Map({
   target: 'map',
   layers: [
-    new Tile({
+    new TileLayer({
       source: new OSM()
     }),
     vectorLayer
