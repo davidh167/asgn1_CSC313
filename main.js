@@ -2,9 +2,7 @@ import './style.css';
 // import Map from 'ol/Map';
 // import View from 'ol/View';
 // import TileLayer from 'ol/layer/Tile';
-// import OSM from 'ol/source/OSM';
-
-
+import OSM from 'ol/source/OSM';
 import Feature from 'ol/Feature.js';
 import Map from 'ol/Map.js';
 import Point from 'ol/geom/Point.js';
@@ -127,7 +125,7 @@ const rasterLayer = new TileLayer({
 const map = new Map({
   target: 'map',
   layers: [
-    new TileLayer({
+    new Tile({
       source: new OSM()
     }),
     vectorLayer
